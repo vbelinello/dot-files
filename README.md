@@ -12,7 +12,7 @@
 3. yay -S otf-font-awesome noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-symbola ttf-jetbrains-mono-nerd discord-ptb google-chrome brave-bin insomnia-bin
 4. sudo pacman -R gnu-free-fonts
 5. sudo systemctl enable bluetooth
-6. sudo pacman -S btop neovim libreoffice-still dbeaver fish terraform brightnessctl
+6. sudo pacman -S btop neovim libreoffice-still dbeaver fish terraform brightnessctl thunar
 7. curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 8. cargo install bat ripgrep exa
 9. echo /usr/bin/fish | sudo tee -a /etc/shells
