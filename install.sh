@@ -4,10 +4,11 @@ sudo apt update
 sudo apt install -y nala
 
 # Install basic packages
-sudo nala install -y pipewire-audio bluez git unzip fonts-noto curl wget build-essential  alacritty
+sudo nala install -y curl wget unzip fonts-noto build-essential neovim btop bat ripgrep zsh jq
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 
 # Install i3 and utils
-sudo nala install -y i3-wm rofi feh picom dunst flameshot libreoffice-calc mpv neovim btop bat ripgrep zsh jq obs-studio
+sudo nala install -y xorg pipewire-audio bluez i3-wm alacritty rofi feh picom dunst flameshot libreoffice-calc mpv
 
 ## Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb  -O chrome.deb
@@ -23,8 +24,6 @@ sudo nala install -y ./discord.deb
 rm discord.deb
 ## ZSH plugin manager
 # zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
-## ASDF
-git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 ## Dbeaver
 wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb -O dbeaver.deb
 sudo nala install -y ./dbeaver.deb
@@ -33,9 +32,7 @@ rm dbeaver.deb
 wget https://download.konghq.com/insomnia-ubuntu/pool/all/i/insomnia/insomnia_8.1.0_amd64.deb -O insomnia.deb
 sudo nala install -y ./insomnia.deb
 rm insomnia.deb
-## Github cli
-curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg \
-&& echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null \
-&& sudo nala update \
-&& sudo nala install gh -y
+## Github CLI
+wget https://github.com/cli/cli/releases/download/v2.35.0/gh_2.35.0_linux_amd64.deb -O gh.deb
+sudo nala install -y ./gh.deb
+rm gh.deb
