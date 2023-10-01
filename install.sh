@@ -4,8 +4,13 @@ sudo apt update
 sudo apt install -y nala
 
 # Install basic packages
-sudo nala install -y curl wget unzip fonts-noto build-essential neovim btop bat ripgrep zsh jq gnupg software-properties-common
+sudo nala install -y curl wget unzip fonts-noto rsync neovim neofetch btop bat ripgrep zsh jq gnupg software-properties-common
+# Build deps
+sudo nala install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev
+sudo nala install -y autoconf patch rustc libyaml-dev libreadline6-dev libgmp-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev libdb-dev uuid-dev
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+echo '. "$HOME/.asdf/asdf.sh"' >> ~/.zshrc
+
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
 ## Extra fonts
@@ -45,9 +50,7 @@ sudo nala install -y ./gh.deb
 rm gh.deb
 
 sudo chsh -s $(which zsh) victor
-rmdir ~/Desktop ~/Downloads ~/Documents ~/Pictures ~/Public ~/Music ~/Templates ~/Videos
+
 
 cp -R .config wallpapers .xinitrc .XResources .zprofile ~/
 
-# Copy files from machine
-#rsync -avP --exclude='__pycache__' --exclude='.venv' --exclude='node_modules' --exclude='session' --exclude='.mypy_cache' --exclude='bronze' --exclude='dist' --exclude='pdfs/cau' --exclude='*.parquet' --exclude='.terraspace-cache' --exclude='data_acquisition' victor@192.168.1.11:/home/victor/driva /home/victor/
