@@ -1,0 +1,14 @@
+env:
+  TERM: alacritty
+
+scrolling:
+  history: 100000
+
+font:
+  normal:
+    family: "Noto Sans Mono"
+    style: Regular
+shell:
+  program: /bin/zsh
+  args:
+    - --login
