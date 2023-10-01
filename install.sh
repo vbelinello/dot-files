@@ -36,3 +36,8 @@ rm insomnia.deb
 wget https://github.com/cli/cli/releases/download/v2.35.0/gh_2.35.0_linux_amd64.deb -O gh.deb
 sudo nala install -y ./gh.deb
 rm gh.deb
+
+sudo chsh -s $(which zsh) victor
+rmdir ~/Desktop ~/Downloads ~/Documents ~/Public ~/Templates ~/Video ~/Pictures
+
+cp -R .config wallpapers .xinitrc .XResources .zprofile ~/
