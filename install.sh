@@ -38,9 +38,10 @@ wget https://github.com/cli/cli/releases/download/v2.35.0/gh_2.35.0_linux_amd64.
 sudo nala install -y ./gh.deb
 rm gh.deb
 
-# Copy files from machine
-# rsync -avP --exclude='__pycache__' --exclude='.venv' --exclude='node_modules' --exclude='session' --exclude='.mypy_cache' --exclude='bronze' --exclude='dist' --exclude='pdfs/cau' --exclude='*.parquet' --exclude='.terraspace-cache' --exclude='data_acquisition' victor@192.168.1.11:/home/victor/driva /home/victor/
 sudo chsh -s $(which zsh) victor
 rmdir ~/Desktop ~/Downloads ~/Documents ~/Pictures ~/Public ~/Music ~/Templates ~/Videos
 
 cp -R .config wallpapers .xinitrc .XResources .zprofile ~/
+
+# Copy files from machine
+#rsync -avP --exclude='__pycache__' --exclude='.venv' --exclude='node_modules' --exclude='session' --exclude='.mypy_cache' --exclude='bronze' --exclude='dist' --exclude='pdfs/cau' --exclude='*.parquet' --exclude='.terraspace-cache' --exclude='data_acquisition' victor@192.168.1.11:/home/victor/driva /home/victor/
