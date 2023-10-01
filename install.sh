@@ -8,6 +8,12 @@ sudo nala install -y curl wget unzip fonts-noto build-essential neovim btop bat 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
+## Extra fonts
+mkdir -p ~/.local/share/fonts
+wget https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Regular.ttf
+mv 'MesloLGS NF Regular.ttf' ~/.local/share/fonts
+fc-cache -fv ~/.local/share/fonts
+
 # Install i3 and desktop utils
 sudo nala install -y xorg pipewire-audio bluez i3-wm alacritty rofi feh picom dunst flameshot libreoffice-calc mpv
 
