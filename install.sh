@@ -23,7 +23,7 @@ wget "https://discord.com/api/download?platform=linux&format=deb" -O discord.deb
 sudo nala install -y ./discord.deb
 rm discord.deb
 ## ZSH plugin manager
-# zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
+zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
 ## Dbeaver
 wget https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb -O dbeaver.deb
 sudo nala install -y ./dbeaver.deb
@@ -36,3 +36,6 @@ rm insomnia.deb
 wget https://github.com/cli/cli/releases/download/v2.35.0/gh_2.35.0_linux_amd64.deb -O gh.deb
 sudo nala install -y ./gh.deb
 rm gh.deb
+
+# Copy files from machine
+# rsync -avP --exclude='__pycache__' --exclude='.venv' --exclude='node_modules' --exclude='session' --exclude='.mypy_cache' --exclude='bronze' --exclude='dist' --exclude='pdfs/cau' --exclude='*.parquet' --exclude='.terraspace-cache' --exclude='data_acquisition' victor@192.168.1.11:/home/victor/driva /home/victor/
