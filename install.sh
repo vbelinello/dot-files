@@ -4,10 +4,11 @@ sudo apt update
 sudo apt install -y nala
 
 # Install basic packages
-sudo nala install -y curl wget unzip fonts-noto build-essential neovim btop bat ripgrep zsh jq
+sudo nala install -y curl wget unzip fonts-noto build-essential neovim btop bat ripgrep zsh jq gnupg software-properties-common
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
+curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
 
-# Install i3 and utils
+# Install i3 and desktop utils
 sudo nala install -y xorg pipewire-audio bluez i3-wm alacritty rofi feh picom dunst flameshot libreoffice-calc mpv
 
 ## Chrome
@@ -39,3 +40,7 @@ rm gh.deb
 
 # Copy files from machine
 # rsync -avP --exclude='__pycache__' --exclude='.venv' --exclude='node_modules' --exclude='session' --exclude='.mypy_cache' --exclude='bronze' --exclude='dist' --exclude='pdfs/cau' --exclude='*.parquet' --exclude='.terraspace-cache' --exclude='data_acquisition' victor@192.168.1.11:/home/victor/driva /home/victor/
+sudo chsh -s $(which zsh) victor
+rmdir ~/Desktop ~/Downloads ~/Documents ~/Pictures ~/Public ~/Music ~/Templates ~/Videos
+
+cp -R .config wallpapers .xinitrc .XResources .zprofile ~/
