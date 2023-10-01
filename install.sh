@@ -51,6 +51,6 @@ rm gh.deb
 
 sudo chsh -s $(which zsh) victor
 
-
 cp -R .config wallpapers .xinitrc .XResources .zprofile ~/
 
+sudo cp 50-touchpad.conf /etc/X11/xorg.conf.d/
