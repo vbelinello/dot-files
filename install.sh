@@ -9,7 +9,7 @@ git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 curl -L https://aka.ms/InstallAzureCli | bash
 
 # Utils
-sudo pacman -Sy libreoffice-still pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse bluez bluez-utils brightnessctl  wget curl unzip rsync neofetch picom
+sudo pacman -Sy libreoffice-still pipewire wireplumber pipewire-audio pipewire-alsa pipewire-pulse bluez bluez-utils brightnessctl  wget curl unzip rsync neofetch picom feh
 
 ## ZSH plugin manager
 zsh <(curl -s https://raw.githubusercontent.com/zap-zsh/zap/master/install.zsh) --branch release-v1
