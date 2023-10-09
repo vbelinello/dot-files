@@ -5,8 +5,9 @@ while true; do
         sleep 5
 done &
 
-feh --bg-fill --randomize ~/wallpapers/
 picom --config ~/.config/picom/picom.conf &
+sh ~/dot-files/screen.sh
+feh --bg-scale ~/wallpapers/vinland_saga.png ~/wallpapers/vertical.jpg
 
 exec dwm
 
