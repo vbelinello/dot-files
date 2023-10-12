@@ -5,9 +5,11 @@ asdf plugin add ruby
 asdf plugin add kubelogin
 asdf plugin add kubectl
 asdf plugin-add terraform https://github.com/asdf-community/asdf-hashicorp.git
+asdf plugin-add helm https://github.com/Antiarchitect/asdf-helm.git
 
 
 asdf install nodejs latest
+asdf install nodejs 18.18.0
 asdf install ruby latest
 asdf install kubectl latest
 asdf install kubelogin latest
