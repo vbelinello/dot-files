@@ -2,7 +2,7 @@
 sudo pacman -Sy xorg xorg-xinit git base-devel openssl zlib xz tk unzip libx11 libxft libxinerama openssh
 
 # Dev
-sudo pacman -Sy zsh btop neovim dbeaver github-cli
+sudo pacman -Sy zsh btop neovim dbeaver github-cli docker
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 
@@ -16,7 +16,7 @@ sudo chsh -s $(which zsh) victor
 cd ~
 git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
-yay -S nerd-fonts discord-ptb google-chrome insomnia-bin visual-studio-code-bin azure-cli-bin
+yay -S nerd-fonts discord-ptb google-chrome insomnia-bin visual-studio-code-bin azure-cli-bin azure-storage-explorer
 
 # Files
 cp -R dot-files/.config dot-files/wallpapers dot-files/xorg/.xinitrc dot-files/xorg/.Xresources dot-files/.zprofile ~/

@@ -20,11 +20,11 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "1", "2", "3", "4", "5"};
 
 static const Rule rules[] = {
 	/* class      	instance	title	tags mask     	isfloating   	monitor */
-	{ "discord", 	NULL,		NULL,	1 << 8,		0,		-1 },
+	{ "discord", 	NULL,		NULL,	1 << 4,		0,		-1 },
 };
 
 /* layout(s) */
@@ -76,7 +76,6 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,      			setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      			setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      			setlayout,      {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,  			setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  			togglefloating, {0} },
 	{ MODKEY,                       XK_0,      			view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      			tag,            {.ui = ~0 } },
@@ -89,10 +88,6 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_3,                      	2)
 	TAGKEYS(                        XK_4,                      	3)
 	TAGKEYS(                        XK_5,                      	4)
-	TAGKEYS(                        XK_6,                      	5)
-	TAGKEYS(                        XK_7,                      	6)
-	TAGKEYS(                        XK_8,                      	7)
-	TAGKEYS(                        XK_9,                      	8)
 	{ MODKEY|ShiftMask,             XK_q,      			quit,           {0} },
 	{0, 				XF86XK_MonBrightnessUp,		spawn, 		{.v = brupcmd} },
 	{0, 				XF86XK_MonBrightnessDown,	spawn, 		{.v = brdowncmd} },
