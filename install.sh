@@ -1,7 +1,8 @@
 # Basic
 sudo pacman -Syyuu
 
-sudo pacman -Sy git zsh btop neovim dbeaver github-cli jq base-devel openssl zlib xz tk unzip openssh rsync neofetch wget curl libreoffice-still starship spectacle bluez bluez-utils pulseaudio-bluetooth
+sudo pacman -Sy git zsh btop neovim dbeaver github-cli jq base-devel openssl zlib xz tk unzip openssh rsync neofetch wget curl libreoffice-still starship spectacle bluez bluez-utils partitionmanager dosfstools pulseaudio-bluetooth
+sudo pacman -R kate
 
 git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.13.1
 
