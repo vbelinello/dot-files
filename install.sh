@@ -12,7 +12,7 @@ sudo chsh -s $(which zsh) victor
 # AUR Helper
 git clone https://aur.archlinux.org/yay.git ~/yay && cd ~/yay && makepkg -si
 
-yay -S discord-ptb google-chrome visual-studio-code-bin azure-cli-bin noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-symbola ttf-jetbrains-mono-nerd azure-storage-explorer
+yay -S discord-ptb google-chrome visual-studio-code-bin azure-cli-bin noto-fonts-cjk noto-fonts-emoji noto-fonts ttf-symbola ttf-jetbrains-mono-nerd azure-storage-explorer helm
 
 # Extra
 git config --global user.email "victor@driva.com.br"
